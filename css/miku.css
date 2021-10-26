@@ -1,0 +1,11 @@
+html, body{
+    background-color: rgb(147, 208, 211);
+}
+
+li {
+    background-color: rgb(97, 170, 173);
+}
+
+li:hover{
+    background-color: rgb(74, 131, 133);
+}

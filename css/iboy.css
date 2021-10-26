@@ -1,0 +1,11 @@
+html, body{
+    background-color: #ffd349;
+}
+
+li {
+    background-color: #dfaf1f;
+}
+
+li:hover{
+    background-color: #af8a1b;
+}
