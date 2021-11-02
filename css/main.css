@@ -5,7 +5,7 @@
     --color-dark: #434A42;
     --color-light: #C3B299;
 
-    --font-nav: 'WindSong', cursive;
+    --font-nav: 'WindSong', cursive, bold;
     --font-main: Arial, Helvetica, sans-serif;
 }
 
@@ -33,22 +33,48 @@ header{
 
 header h1{
     font-family: var(--font-main);
-    color: var(--color-light);
-    margin-left: 1em;
+    color: var(--color-text);
+    margin-left: 1.5em;
 }
+
+header label{
+    display: flex;
+    justify-content: center;
+}
+
+#nav-button-icon{
+    transform: rotate(180deg);
+}
+
 
 /* Nav */
 
 ul{
     list-style-type: none;
+    padding: 0;
 }
 
-a{
+.links li,
+.links li a{
+    font-family: var(--font-nav);
+    color: var(--color-text);
+    font-size: 2rem;
+}
+
+.links li{
+    padding: 1em 1em;
+    background-color: var(--color-light);
+}
+
+.links li a{
     text-decoration: none;
 }
 
 nav{
-    display: none;
+    /* display: none; */
+    transform: scaleY(0);
+    transition-duration: 150ms;
+    transform-origin: top;
 }
 
 #nav-button{
@@ -56,11 +82,14 @@ nav{
 }
 
 #nav-button:checked ~ nav {
+    transform: scaleY(1);
     display: block;
+    transition-duration: 200ms;
+    transform-origin: top;
 }
 
-svg{
-    display: block;
+#nav-button:checked ~ label #nav-button-icon{
+    transform: rotate(0deg);
 }
 
 /* Old */
