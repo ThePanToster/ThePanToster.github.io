@@ -1,11 +1,11 @@
 :root{
     --color-primary: #7765E3;
-    --color-accent: #7FC8F8;
+    --color-accent: #87ccfa;
     --color-text: #FFFCFF;
     --color-dark: #434A42;
-    --color-light: #C3B299;
+    --color-light: #9e95ce;
 
-    --font-nav: 'WindSong', cursive, bold;
+    --font-nav: 'Inconsolata', monospace;
     --font-main: Arial, Helvetica, sans-serif;
 }
 
@@ -62,123 +62,55 @@ ul{
 }
 
 .links li{
-    padding: 1em 1em;
-    background-color: var(--color-light);
+    background-color: var(--color-accent);
 }
+
+.links li > a::after{
+    content: '';
+    position: absolute;
+    top: 140%;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    border-radius: 25%;
+    background-color: var(--color-text);
+    transform: scaleX(0);
+    transition: ease-in 300ms;
+}
+
+.links li:hover > a::after,
+.links li:focus > a::after{
+    transform: scaleX(1);
+    transition: ease-out 200ms;
+}
+
 
 .links li a{
     text-decoration: none;
+    display: inline-block;
+    margin: 0.75em 1em;
+    position: relative;
 }
 
-nav{
-    /* display: none; */
+.links{
+    max-height: 0;
     transform: scaleY(0);
-    transition-duration: 150ms;
+    transition: all ease-in-out 150ms;
     transform-origin: top;
+    overflow: hidden;
 }
 
 #nav-button{
     display: none;
 }
 
-#nav-button:checked ~ nav {
+#nav-button:checked ~ .links {
     transform: scaleY(1);
-    display: block;
-    transition-duration: 200ms;
+    max-height: 500px;
+    transition: all ease-in-out 200ms;
     transform-origin: top;
 }
 
 #nav-button:checked ~ label #nav-button-icon{
     transform: rotate(0deg);
 }
-
-/* Old */
-
-/* #container{
-    width: 98%;
-    margin: auto;
-}
-
-#footer, #header, #menu{
-    height: 100px;
-    text-align: center;
-    position: relative;
-}
-
-#footer > p {
-    position: absolute;
-    bottom: 0px;
-    left: 45%;
-}
-
-ul{
-    list-style-type: none;
-}
-
-li{
-    display: inline-block;
-    width: 30%;
-    height: 70px;
-    background-color: coral;
-    position: relative;
-    transition-duration: 0.2s;
-    transform: scale(1);
-}
-
-.menu > li > ul > li{
-    display: block;
-    width: 100%;
-}
-
-.menu > li > ul{
-    visibility: hidden;
-    position: absolute;
-    top: 70px;
-    left: -40px;
-    transform-origin: 150px 0px;
-    transition-duration: 0.3s;
-    transform: scaleY(0);
-    width: 100%;
-}
-
-.menu > li:hover > ul{
-    visibility: visible;
-    transform-origin: -200px 0px;
-    transition-duration: 0.5s;
-    transform: scaleY(1);
-}
-
-li:hover{
-    background-color: rgb(178, 68, 34);
-    transition-duration: 0.5s;
-    transform: scale(1.05);
-}
-
-#header{
-    height: 200px;
-    background-image: url("https://cdn.discordapp.com/attachments/688420140609437743/873265309811892284/57ebd99c24601584fcd040b359036feb.jpg_ooooxooxox_1280x720.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0 -100px;
-}
-
-.menu{
-    font-family: 'WindSong', cursive;
-    font-size: 2vw;
-    font-weight: bold;
-    cursor: pointer;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    line-height: 75px;
-}
-
-#content{
-    font-family: Arial, Helvetica, sans-serif;
-	font-size: 30px;
-	color: rgb(255, 255, 255);
-	text-align: center;
-}
-
-#content > h1{
-    margin-top: 0px;
-} */
