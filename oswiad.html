@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XDDD</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 2em;
+            max-width: 210mm;
+            max-height: 297mm;
+            display: grid;
+            grid-template: ". data" 3em
+                           "tresc tresc" auto
+                           ". podpis" 3em 
+                           / 2fr 1fr;
+            font-size: 1.25rem;
+            text-align: center;
+        }
+        .data{
+            grid-area: data;
+        }
+        .tresc{
+            grid-area: tresc; 
+        }
+        .tresc > input{
+            width: fit-content;
+            border: 1px solid transparent;
+            border-bottom-color: black;
+            max-width: fit-content;
+        }
+        .podpis{
+            grid-area: podpis;
+            width: 100%;
+            border: 1px solid transparent;
+            border-bottom-color: black;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="data">Krosno, 07.11.2021r.</div>
+    <div class="tresc">
+        Wyrażam zgodę na wyjazd mojego syna <input type="text"> na strzelnicę LOK w Brzozowie.<br>
+        Jestem świadoma, że na w/w zajęciach moje dziecko pozna zasady bezpiecznego posługiwania się bronią, 
+        weźmie udział w zajęciach nauki strzelania pod okiem doświadczonych instruktorów strzelectwa.
+    </div>
+    <div class="podpis"></div>
+</body>
+</html>
