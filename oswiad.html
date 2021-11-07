@@ -16,7 +16,7 @@
                            "tresc tresc" auto
                            ". podpis" 3em 
                            / 2fr 1fr;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             text-align: center;
         }
         .data{
@@ -26,10 +26,16 @@
             grid-area: tresc; 
         }
         .tresc > input{
-            width: fit-content;
+            width: min-content;
+            height: 1.5em;
             border: 1px solid transparent;
             border-bottom-color: black;
-            max-width: fit-content;
+            text-align: center;
+            font-size: 1rem;
+        }
+        .tresc > input:focus{
+            border: 1px solid transparent;
+            border-bottom-color: black;
         }
         .podpis{
             grid-area: podpis;
