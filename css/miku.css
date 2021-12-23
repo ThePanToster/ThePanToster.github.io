@@ -1,11 +1,10 @@
-html, body{
-    background-color: rgb(147, 208, 211);
-}
+:root{
+    --color-primary: rgb(74, 131, 133);
+    --color-accent: rgb(97, 170, 173);
+    --color-text: #FFFCFF;
+    --color-dark: #434A42;
+    --color-light: rgb(147, 208, 211);
 
-li {
-    background-color: rgb(97, 170, 173);
-}
-
-li:hover{
-    background-color: rgb(74, 131, 133);
+    --font-nav: 'Inconsolata', monospace;
+    --font-main: Arial, Helvetica, sans-serif;
 }
