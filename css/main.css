@@ -1,6 +1,6 @@
 :root{
     --color-primary: #7765E3;
-    --color-accent: #87ccfa;
+    --color-accent: #9284e0;
     --color-text: #FFFCFF;
     --color-dark: #434A42;
     --color-light: #9e95ce;
@@ -113,4 +113,49 @@ ul{
 
 #nav-button:checked ~ label #nav-button-icon{
     transform: rotate(0deg);
+}
+
+@media only screen and (min-width: 850px) {
+    ul{
+        display: flex;
+    }
+    .links li{
+        width: 100%;
+        margin: 0 1em;
+        height: fit-content;
+        text-align: center;
+    }
+    #nav-button-icon{
+        display: none;
+    }
+    .links{
+        overflow: visible;
+        transform: scaleY(1);
+        max-height: 500px;
+        transition: all ease-in-out 200ms;
+        transform-origin: top;
+    }
+    .inner-links{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80%;
+        left: 35.5%;
+        z-index: 4;
+        width: 29%;
+        transform: scaleY(0);
+        transition: all ease-in-out 200ms;
+        transform-origin: top;
+    }
+    .inner-links:hover{
+        display: flex;
+    }
+    .inner-links li{
+        margin: 0;
+    }
+    #my-games:hover .inner-links{
+        transform: scaleY(1);
+        transition: all ease-in-out 200ms;
+        transform-origin: top;
+    }
 }
