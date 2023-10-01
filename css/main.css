@@ -5,6 +5,7 @@
 
   --font-nav: 'Inconsolata', monospace;
   --font-main: Arial, Helvetica, sans-serif;
+  --font-title: 'Caveat', cursive;
 }
 
 *,
@@ -36,6 +37,11 @@ a {
 
 hr {
   width: 90%;
+}
+
+h1 {
+  font-family: var(--font-title);
+  font-size: 80pt;
 }
 
 /* Header */
@@ -188,16 +194,17 @@ main {
   font-size: 1.5rem;
 }
 
-main h2 {
-  font-size: 3rem;
-  font-family: var(--font-main);
-  margin-top: 0.5em;
-}
-
 section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   margin: 0 4em;
   text-align: center;
   padding: 2em;
+}
+
+section img {
+  width: 30%;
 }
 
 /* Footer */
