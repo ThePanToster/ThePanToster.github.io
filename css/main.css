@@ -14,7 +14,6 @@
   box-sizing: inherit;
 }
 
-html,
 body,
 .theme {
   width: 100%;
@@ -41,7 +40,7 @@ hr {
 
 h1 {
   font-family: var(--font-title);
-  font-size: 80pt;
+  font-size: calc(30pt + 5vw);
 }
 
 /* Header */
@@ -159,7 +158,6 @@ ul {
   aspect-ratio: 1;
   border-radius: 50%;
   border: 2px solid var(--color-text);
-  background-color: #fffcff;
   transform: translateX(0);
   transition: all ease-in-out 300ms;
   background-image: url('../assets/images/btn_texture.png');
@@ -194,17 +192,20 @@ main {
   font-size: 1.5rem;
 }
 
-section {
+main section {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin: 0 4em;
   text-align: center;
-  padding: 2em;
+  padding: 1em;
+  gap: 1em;
 }
 
 section img {
-  width: 30%;
+  height: calc(200px + 40vw);
+  width: min-content;
 }
 
 /* Footer */
@@ -243,5 +244,16 @@ footer {
   }
   .settings {
     width: auto;
+  }
+  section img {
+    height: 600px;
+    width: auto;
+  }
+  main section {
+    flex-direction: row;
+    align-items: normal;
+  }
+  h1 {
+    font-size: 80pt;
   }
 }
