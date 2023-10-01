@@ -1,53 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>The PanToster's official website</title>
-        <meta charset="UTF-8">
-        <meta name="description" content="Yup, that's my official page">
-        <meta name="keywords" content="android, games, thepantoster, vocaloid, quiz, miku, iboy, simulator, maciek21223">
-        <meta name="author" content="Albert Ząbkiewicz">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/main.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet"> 
-    </head>
-    <body>
-        <header>
-            <h1><a href="/index.html">The PanToster</a></h1>
-            <nav>
-                <input type="checkbox" id="nav-button">
-                <ul class="links">
-                    <li><a href="/index.html">Main page</a></li>
-                    <li id="my-games"><a href="#">My games</a>
-                        <ul class="inner-links">
-                            <li><a href="/games/vocaloidquiz/index.html">Vocaloid Quiz</a></li>
-                            <li><a href="/games/iboysymulator/index.html">Iboy Symulator</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/aboutme.html">About me</a></li>
-                </ul>
-                <label for="nav-button">
-                    <svg id="nav-button-icon" viewBox="0 0 451 164" width="45" height="16" xmlns="http://www.w3.org/2000/svg">
-                        <path style="fill: none; stroke-width: 28px; stroke: rgb(255, 255, 255);" d="M 13.404 153.776 C 227.512 -149.804 430.396 143.8 437.552 155.572"/>
-                    </svg>
-                </label>
-            </nav>
-        </header>
-        <main>
-            <section>
-                <p>Nothing is there...</p>
-            </section>
-        </main>
-        <footer>
-            <ul class="footer-socials">
-                <li><a href="https://discord.com/invite/A5mSWab">Discord</a></li>
-                <li><a href="https://www.facebook.com/ThePanToster">Facebook</a></li>
-                <li><a href="https://www.youtube.com/c/ThePanToster">YouTube</a></li>
-                <li><a href="https://soundcloud.com/thepantoster">SoundCloud</a></li>
-                <li><a href="https://github.com/ThePanToster">GitHub</a></li>
-            </ul>
-        </footer>
-    </body>
+  <head>
+    <title>Albert Ząbkiewicz</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Yup, that's my official page" />
+    <meta
+      name="keywords"
+      content="android, games, thepantoster, vocaloid, quiz, miku, iboy, simulator, maciek21223"
+    />
+    <meta name="author" content="Albert Ząbkiewicz" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Jaldi&family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./assets/lang/en.js" defer></script>
+    <script src="./assets/lang/pl.js" defer></script>
+    <script src="./js/translate.js" defer></script>
+    <script src="./js/theme.js" defer></script>
+  </head>
+  <body>
+    <input type="checkbox" id="theme" />
+    <input type="checkbox" id="language" />
+    <div class="theme">
+      <header>
+        <nav>
+          <ul class="links">
+            <li><a href="#" class="t-000">About me</a></li>
+            <li><a href="#" class="t-001">My projects</a></li>
+            <li><a href="#" class="t-002">Contact me</a></li>
+          </ul>
+        </nav>
+        <div class="settings">
+          <label for="theme">
+            <p class="t-003">Dark mode</p>
+            <div class="slider">
+              <p>ON OF</p>
+              <div class="ball"></div>
+            </div>
+          </label>
+          <label for="language">
+            <p class="t-004">Language</p>
+            <div class="slider">
+              <p>PL EN</p>
+              <div class="ball"></div>
+            </div>
+          </label>
+        </div>
+      </header>
+      <hr />
+      <main>
+        <section>
+          <div>
+            <h1>Albert Ząbkiewicz</h1>
+            <p>Software Developer</p>
+          </div>
+
+          <img src="./assets/images/portrait.png" alt="portrait" />
+        </section>
+      </main>
+      <hr />
+      <footer>
+        <ul class="footer-socials">
+          <li><a href="https://discord.com/invite/A5mSWab">Discord</a></li>
+          <li>
+            <a href="https://www.facebook.com/albert.zabkiewicz">Facebook</a>
+          </li>
+          <li><a href="https://www.youtube.com/c/ThePanToster">YouTube</a></li>
+          <li><a href="https://github.com/ThePanToster">GitHub</a></li>
+        </ul>
+      </footer>
+    </div>
+  </body>
 </html>
